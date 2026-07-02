@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4662 Crown Parkway &middot; Morrisville, NC 27560</title>
+<meta name="description" content="Video tour and floor plan for 4662 Crown Parkway, Morrisville, NC 27560 — a 3 bedroom, 2 bath home with sunroom, laundry room, garage, and private backyard.">
+<style>
+  :root {
+    --ivory: #faf7f2;
+    --cream: #f3eee4;
+    --ink: #22271f;
+    --ink-soft: #4a5142;
+    --green: #33402c;
+    --green-deep: #242e1f;
+    --brass: #b08d4f;
+    --brass-soft: #d8c49a;
+    --line: rgba(34, 39, 31, 0.14);
+    --serif: Georgia, "Times New Roman", Times, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, video { max-width: 100%; display: block; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Top nav ---------- */
+  header.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .brand span { color: var(--brass); }
+  nav.links { display: flex; gap: 26px; }
+  nav.links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    transition: color 0.2s ease;
+  }
+  nav.links a:hover { color: var(--brass); }
+  @media (max-width: 720px) { nav.links { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(176, 141, 79, 0.14), transparent 55%),
+      linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
+    color: var(--ivory);
+    text-align: center;
+    padding: 96px 24px 200px;
+    position: relative;
+  }
+  .hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.74rem;
+    color: var(--brass-soft);
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+  }
+  .hero .locale {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+    color: rgba(250, 247, 242, 0.78);
+    margin-top: 16px;
+  }
+  .hero .rule {
+    width: 64px;
+    height: 1px;
+    background: var(--brass);
+    margin: 34px auto;
+  }
+  .hero p.blurb {
+    max-width: 620px;
+    margin: 0 auto;
+    color: rgba(250, 247, 242, 0.85);
+    font-size: 1.02rem;
+  }
+  .hero .cta-row { margin-top: 40px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  .btn-solid { background: var(--brass); color: var(--green-deep); }
+  .btn-solid:hover { background: var(--brass-soft); }
+  .btn-ghost { border: 1px solid rgba(250, 247, 242, 0.45); color: var(--ivory); }
+  .btn-ghost:hover { border-color: var(--brass); color: var(--brass-soft); }
+
+  /* ---------- Stats bar ---------- */
+  .stats {
+    max-width: 880px;
+    margin: -78px auto 0;
+    position: relative;
+    z-index: 5;
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: 0 24px 60px -24px rgba(36, 46, 31, 0.45);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+  .stat { padding: 30px 12px; border-left: 1px solid var(--line); }
+  .stat:first-child { border-left: none; }
+  .stat .num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--green);
+    line-height: 1.1;
+  }
+  .stat .label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); margin-left: 24px; margin-right: 24px; }
+    .stat:nth-child(3) { border-left: none; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 92px 0; }
+  .sec-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .sec-head .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.72rem;
+    color: var(--brass);
+    margin-bottom: 14px;
+  }
+  .sec-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .sec-head p { color: var(--ink-soft); margin-top: 16px; font-size: 0.98rem; }
+
+  /* ---------- Featured video ---------- */
+  .feature-card {
+    background: var(--green-deep);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px -30px rgba(36, 46, 31, 0.55);
+  }
+  .feature-card video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #101408; }
+  .feature-card .caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 22px 28px;
+    color: var(--ivory);
+  }
+  .feature-card .caption h3 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; }
+  .feature-card .caption p { color: rgba(250, 247, 242, 0.7); font-size: 0.9rem; }
+
+  /* ---------- Video grid ---------- */
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+    margin-top: 44px;
+  }
+  @media (max-width: 820px) { .tour-grid { grid-template-columns: 1fr; } }
+  .tour-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .tour-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 44px -22px rgba(36, 46, 31, 0.35);
+  }
+  .tour-card video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #101408; }
+  .tour-card .meta { padding: 22px 24px 26px; }
+  .tour-card .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.66rem;
+    color: var(--brass);
+    margin-bottom: 8px;
+  }
+  .tour-card h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.28rem;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .tour-card p { color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* ---------- Floor plan ---------- */
+  .plan-section { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .plan-frame {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: clamp(16px, 4vw, 48px);
+    box-shadow: 0 24px 56px -28px rgba(36, 46, 31, 0.3);
+    cursor: zoom-in;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .plan-frame img { width: 100%; height: auto; }
+  .plan-hint {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(20, 24, 16, 0.94);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 92vh;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  }
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: var(--ivory);
+    font-size: 2rem;
+    line-height: 1;
+    font-family: var(--sans);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .lightbox .close:hover { opacity: 1; }
+
+  /* ---------- Highlights ---------- */
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 820px) { .highlights { grid-template-columns: 1fr; } }
+  .hl {
+    border-top: 2px solid var(--brass);
+    padding-top: 22px;
+  }
+  .hl h3 { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; margin-bottom: 10px; }
+  .hl p { color: var(--ink-soft); font-size: 0.93rem; }
+
+  /* ---------- Location ---------- */
+  .location-section { background: var(--cream); border-top: 1px solid var(--line); }
+  .location-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 820px) { .location-inner { grid-template-columns: 1fr; } }
+  .location-copy .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.72rem;
+    color: var(--brass);
+    margin-bottom: 14px;
+  }
+  .location-copy h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+  .location-copy p { color: var(--ink-soft); font-size: 0.97rem; margin-bottom: 14px; }
+  .map-frame {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 24px 56px -28px rgba(36, 46, 31, 0.3);
+  }
+  .map-frame iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    background:
+      radial-gradient(ellipse at 80% 120%, rgba(176, 141, 79, 0.16), transparent 55%),
+      linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
+    color: var(--ivory);
+    text-align: center;
+  }
+  .contact .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.72rem;
+    color: var(--brass-soft);
+    margin-bottom: 14px;
+  }
+  .contact h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 18px;
+  }
+  .contact p { color: rgba(250, 247, 242, 0.82); max-width: 540px; margin: 0 auto 34px; }
+
+  footer {
+    background: var(--green-deep);
+    color: rgba(250, 247, 242, 0.55);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 28px 24px;
+    border-top: 1px solid rgba(250, 247, 242, 0.08);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">4662 <span>&middot;</span> Crown Parkway</a>
+    <nav class="links">
+      <a href="#tour">Video Tour</a>
+      <a href="#floorplan">Floor Plan</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Inquire</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <p class="eyebrow">For Rent &mdash; Single-Family Home</p>
+  <h1>4662 Crown Parkway</h1>
+  <p class="locale">Morrisville, North Carolina 27560</p>
+  <div class="rule"></div>
+  <p class="blurb">
+    A bright, comfortable three-bedroom home in the heart of the Triangle &mdash;
+    with a sun-filled living space, private backyard, and an easy commute to
+    RTP, RDU, Cary, and Raleigh. Take the full video tour below.
+  </p>
+  <div class="cta-row">
+    <a class="btn btn-solid" href="#tour">Watch the Tour</a>
+    <a class="btn btn-ghost" href="#floorplan">View Floor Plan</a>
+  </div>
+</div>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="stat"><div class="num">3</div><div class="label">Bedrooms</div></div>
+  <div class="stat"><div class="num">2</div><div class="label">Bathrooms</div></div>
+  <div class="stat"><div class="num">1</div><div class="label">Sunroom</div></div>
+  <div class="stat"><div class="num">Yes</div><div class="label">Garage &amp; Laundry</div></div>
+</div>
+
+<!-- ============ VIDEO TOUR ============ -->
+<section id="tour">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Walk Through Every Room</p>
+      <h2>The Video Tour</h2>
+      <p>Each video below walks through a section of the home, in the same order
+         you'd experience it in person &mdash; from the front door to the backyard.</p>
+    </div>
+
+    <!-- Featured: main living spaces -->
+    <div class="feature-card">
+      <video controls preload="metadata" playsinline>
+        <source src="https://video.wixstatic.com/video/b61df5_d1702835fbd14118a301534f791821ba/1080p/mp4/file.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+      <div class="caption">
+        <h3>Kitchen, Sunroom &amp; Living Room</h3>
+        <p>The heart of the home &mdash; open living space flowing into a bright sunroom</p>
+      </div>
+    </div>
+
+    <div class="tour-grid">
+      <div class="tour-card">
+        <video controls preload="metadata" playsinline>
+          <source src="https://video.wixstatic.com/video/b61df5_ffad600b2514465b84f0a22abab99f9c/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
+        <div class="meta">
+          <p class="kicker">Tour &middot; 01</p>
+          <h3>Entryway</h3>
+          <p>Your first steps inside &mdash; the welcoming front entry that sets the tone for the home.</p>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <video controls preload="metadata" playsinline>
+          <source src="https://video.wixstatic.com/video/b61df5_c970379ab9a74d77bea1934101254426/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
+        <div class="meta">
+          <p class="kicker">Tour &middot; 02</p>
+          <h3>Front Bedrooms &amp; Shared Bath</h3>
+          <p>Two comfortable bedrooms at the front of the house, with a full bathroom conveniently between them.</p>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <video controls preload="metadata" playsinline>
+          <source src="https://video.wixstatic.com/video/b61df5_4f3ec03aceeb4e5fae975a10b977d0a3/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
+        <div class="meta">
+          <p class="kicker">Tour &middot; 03</p>
+          <h3>Primary Suite &mdash; Bath &amp; Closet</h3>
+          <p>The private primary suite, featuring its own full bathroom and a spacious closet.</p>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <video controls preload="metadata" playsinline>
+          <source src="https://video.wixstatic.com/video/b61df5_cd468cbebaf246f3b178e6c699df7720/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
+        <div class="meta">
+          <p class="kicker">Tour &middot; 04</p>
+          <h3>Laundry Room &amp; Garage</h3>
+          <p>A dedicated laundry room and attached garage &mdash; practical space for daily life and storage.</p>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <video controls preload="metadata" playsinline>
+          <source src="https://video.wixstatic.com/video/b61df5_2d185c842f904db3a34ca102a28b21d2/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
+        <div class="meta">
+          <p class="kicker">Tour &middot; 05</p>
+          <h3>Backyard</h3>
+          <p>Step outside to the private backyard &mdash; room to relax, garden, or entertain.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOOR PLAN ============ -->
+<section class="plan-section" id="floorplan">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">See How It All Connects</p>
+      <h2>The Floor Plan</h2>
+      <p>Follow along with the videos using the layout below to get a true feel
+         for how the rooms flow together.</p>
+    </div>
+    <div class="plan-frame" id="planFrame">
+      <img src="https://static.wixstatic.com/media/b61df5_07f6d39ac4be4d36952f8212aebcdb2a~mv2.png"
+           alt="Floor plan of 4662 Crown Parkway, Morrisville, NC" loading="lazy">
+    </div>
+    <p class="plan-hint">Click the floor plan to enlarge</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged floor plan">
+  <button class="close" aria-label="Close">&times;</button>
+  <img src="https://static.wixstatic.com/media/b61df5_07f6d39ac4be4d36952f8212aebcdb2a~mv2.png"
+       alt="Floor plan of 4662 Crown Parkway, enlarged">
+</div>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">At a Glance</p>
+      <h2>Home Highlights</h2>
+    </div>
+    <div class="highlights">
+      <div class="hl">
+        <h3>Sun-Filled Living</h3>
+        <p>The kitchen and living room flow into a dedicated sunroom &mdash; a bright,
+           versatile space for morning coffee, a home office, or an extra sitting room.</p>
+      </div>
+      <div class="hl">
+        <h3>Private Primary Suite</h3>
+        <p>The primary bedroom comes with its own full bathroom and a roomy closet,
+           set apart from the two front bedrooms for extra privacy.</p>
+      </div>
+      <div class="hl">
+        <h3>Smart, Practical Layout</h3>
+        <p>Two front bedrooms share a full bath between them, and a dedicated
+           laundry room sits off the attached garage &mdash; everyday convenience built in.</p>
+      </div>
+      <div class="hl">
+        <h3>Outdoor Space</h3>
+        <p>A private backyard gives you room to grill, garden, play, or simply
+           unwind outdoors.</p>
+      </div>
+      <div class="hl">
+        <h3>Attached Garage</h3>
+        <p>Covered parking plus storage, with direct access into the home through
+           the laundry room.</p>
+      </div>
+      <div class="hl">
+        <h3>Prime Triangle Location</h3>
+        <p>Morrisville puts you minutes from Research Triangle Park, RDU Airport,
+           and the shopping and dining of Cary and Raleigh.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="location-section" id="location">
+  <div class="wrap">
+    <div class="location-inner">
+      <div class="location-copy">
+        <p class="eyebrow">Morrisville, North Carolina</p>
+        <h2>In the Heart of the Triangle</h2>
+        <p>4662 Crown Parkway sits in Morrisville &mdash; consistently ranked among
+           the best places to live in North Carolina &mdash; with quick access to
+           I-40, I-540, and NC-54.</p>
+        <p>You're minutes from Research Triangle Park employers, RDU International
+           Airport, Lake Crabtree, and the shops and restaurants of Park West
+           Village and Downtown Cary.</p>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=4662+Crown+Parkway,+Morrisville,+NC+27560&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map showing 4662 Crown Parkway, Morrisville, NC"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Interested in the Home?</p>
+    <h2>Schedule a Visit or Ask a Question</h2>
+    <p>If you'd like more information, want to check availability, or would like
+       to see the home in person, reach out any time.</p>
+    <a class="btn btn-solid" href="mailto:jeremy.layton.brown.smith@gmail.com?subject=Inquiry%20%E2%80%94%204662%20Crown%20Parkway">Email the Owner</a>
+  </div>
+</section>
+
+<footer>
+  4662 Crown Parkway &middot; Morrisville, NC 27560
+</footer>
+
+<script>
+  // Only one video plays at a time.
+  const videos = document.querySelectorAll('video');
+  videos.forEach(v => {
+    v.addEventListener('play', () => {
+      videos.forEach(other => { if (other !== v) other.pause(); });
+    });
+  });
+
+  // Floor plan lightbox.
+  const lightbox = document.getElementById('lightbox');
+  document.getElementById('planFrame').addEventListener('click', () => {
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
