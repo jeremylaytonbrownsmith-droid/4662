@@ -77,6 +77,20 @@
   }
   nav.links a:hover { color: var(--brass); }
   @media (max-width: 720px) { nav.links { display: none; } }
+  .switch-pill {
+    display: inline-block;
+    border: 1px solid var(--brass);
+    color: var(--green);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+  .switch-pill:hover { background: var(--green); border-color: var(--green); color: var(--ivory); }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -497,6 +511,7 @@
       <a href="#location">Location</a>
       <a href="#contact">Inquire</a>
     </nav>
+    <a class="switch-pill" href="shakespeare/">397 Shakespeare &#8644;</a>
   </div>
 </header>
 
@@ -507,9 +522,10 @@
   <p class="locale">Morrisville, North Carolina 27560</p>
   <div class="rule"></div>
   <p class="blurb">
-    A bright, comfortable three-bedroom home in the heart of the Triangle &mdash;
-    with a sun-filled living space, private backyard, and an easy commute to
-    RTP, RDU, Cary, and Raleigh. Explore it room by room below.
+    A three-bedroom, two-bath single-family home in the heart of the Research
+    Triangle, offering a sunlit living area, dedicated sunroom, private backyard,
+    and attached garage &mdash; minutes from Research Triangle Park, RDU
+    International Airport, Cary, and Raleigh.
   </p>
   <div class="cta-row">
     <a class="btn btn-solid" href="#floorplan">Explore the Floor Plan</a>
@@ -529,10 +545,10 @@
 <section id="floorplan">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Start Here</p>
+      <p class="eyebrow">The Layout</p>
       <h2>Explore the Home by Floor Plan</h2>
-      <p>Tap a numbered marker on the plan &mdash; or a room below it &mdash; and
-         the matching video tour will start playing.</p>
+      <p>Select a numbered marker on the plan, or a room from the list below,
+         to view the corresponding video tour.</p>
     </div>
     <div class="plan-frame">
       <div class="plan-inner" id="planInner">
@@ -544,7 +560,7 @@
       <button class="expand-btn" id="expandBtn" aria-label="Enlarge floor plan">&#x26F6; Enlarge</button>
     </div>
     <div class="plan-legend" id="planLegend"><!-- chips injected by script --></div>
-    <p class="plan-hint">Markers are approximate &mdash; each one plays that room's video</p>
+    <p class="plan-hint">Each marker opens the video tour for that room</p>
   </div>
 </section>
 
@@ -558,10 +574,10 @@
 <section class="tour-section" id="tour">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Walk Through Every Room</p>
+      <p class="eyebrow">Room by Room</p>
       <h2>The Video Tour</h2>
-      <p>One player, six stops &mdash; in the same order you'd walk the home.
-         Pick any room from the list to jump around.</p>
+      <p>A guided walk through the home, presented in the order you would
+         experience it in person. Select any room to view it directly.</p>
     </div>
     <div class="theater">
       <div class="stage">
@@ -589,34 +605,34 @@
     </div>
     <div class="highlights">
       <div class="hl">
-        <h3>Sun-Filled Living</h3>
-        <p>The kitchen and living room flow into a dedicated sunroom &mdash; a bright,
-           versatile space for morning coffee, a home office, or an extra sitting room.</p>
+        <h3>Dedicated Sunroom</h3>
+        <p>The kitchen and living room open onto a bright sunroom &mdash; a versatile
+           additional living space well suited to a home office or sitting room.</p>
       </div>
       <div class="hl">
         <h3>Private Primary Suite</h3>
-        <p>The primary bedroom comes with its own full bathroom and a roomy closet,
-           set apart from the two front bedrooms for extra privacy.</p>
+        <p>The primary bedroom includes an en-suite bathroom and a generous closet,
+           positioned apart from the two front bedrooms for added privacy.</p>
       </div>
       <div class="hl">
-        <h3>Smart, Practical Layout</h3>
-        <p>Two front bedrooms share a full bath between them, and a dedicated
-           laundry room sits off the attached garage &mdash; everyday convenience built in.</p>
+        <h3>Practical Layout</h3>
+        <p>Two front bedrooms are served by a full bathroom between them, with a
+           dedicated laundry room adjoining the attached garage.</p>
       </div>
       <div class="hl">
-        <h3>Outdoor Space</h3>
-        <p>A private backyard gives you room to grill, garden, play, or simply
-           unwind outdoors.</p>
+        <h3>Private Backyard</h3>
+        <p>A private backyard provides dedicated outdoor space for dining,
+           gardening, and recreation.</p>
       </div>
       <div class="hl">
         <h3>Attached Garage</h3>
-        <p>Covered parking plus storage, with direct access into the home through
-           the laundry room.</p>
+        <p>Covered parking with additional storage and direct interior access
+           through the laundry room.</p>
       </div>
       <div class="hl">
-        <h3>Prime Triangle Location</h3>
-        <p>Morrisville puts you minutes from Research Triangle Park, RDU Airport,
-           and the shopping and dining of Cary and Raleigh.</p>
+        <h3>Research Triangle Location</h3>
+        <p>Minutes from Research Triangle Park, RDU International Airport, and the
+           shopping and dining districts of Cary and Raleigh.</p>
       </div>
     </div>
   </div>
@@ -629,12 +645,12 @@
       <div class="location-copy">
         <p class="eyebrow">Morrisville, North Carolina</p>
         <h2>In the Heart of the Triangle</h2>
-        <p>4662 Crown Parkway sits in Morrisville &mdash; consistently ranked among
-           the best places to live in North Carolina &mdash; with quick access to
+        <p>4662 Crown Parkway is located in Morrisville, consistently ranked among
+           the best places to live in North Carolina, with convenient access to
            I-40, I-540, and NC-54.</p>
-        <p>You're minutes from Research Triangle Park employers, RDU International
-           Airport, Lake Crabtree, and the shops and restaurants of Park West
-           Village and Downtown Cary.</p>
+        <p>Residents are minutes from Research Triangle Park employers, RDU
+           International Airport, Lake Crabtree County Park, and the shopping and
+           dining of Park West Village and Downtown Cary.</p>
         <a class="btn-zillow"
            href="https://www.zillow.com/homedetails/4662-Crown-Pkwy-Morrisville-NC-27560/114429980_zpid/"
            target="_blank" rel="noopener">View the Listing on Zillow &rarr;</a>
@@ -653,11 +669,11 @@
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <p class="eyebrow">Interested in the Home?</p>
-    <h2>Schedule a Visit or Ask a Question</h2>
-    <p>If you'd like more information, want to check availability, or would like
-       to see the home in person, reach out any time.</p>
-    <a class="btn btn-solid" href="mailto:jeremy.layton.brown.smith@gmail.com?subject=Inquiry%20%E2%80%94%204662%20Crown%20Parkway">Email the Owner</a>
+    <p class="eyebrow">Inquiries</p>
+    <h2>Schedule a Showing</h2>
+    <p>For additional information, current availability, or to arrange a private
+       showing, please reach out &mdash; inquiries are welcome at any time.</p>
+    <a class="btn btn-solid" href="mailto:jeremy.layton.brown.smith@gmail.com?subject=Inquiry%20%E2%80%94%204662%20Crown%20Parkway">Contact the Owner</a>
   </div>
 </section>
 
@@ -673,37 +689,37 @@
   const TOUR = [
     {
       title: 'Entryway',
-      desc: 'Your first steps inside — the welcoming front entry.',
+      desc: 'The front entry and foyer.',
       src: 'https://video.wixstatic.com/video/b61df5_ffad600b2514465b84f0a22abab99f9c/1080p/mp4/file.mp4',
       x: 50, y: 82
     },
     {
       title: 'Front Bedrooms & Shared Bath',
-      desc: 'Two comfortable bedrooms with a full bathroom between them.',
+      desc: 'Two well-proportioned bedrooms served by a full bathroom between them.',
       src: 'https://video.wixstatic.com/video/b61df5_c970379ab9a74d77bea1934101254426/1080p/mp4/file.mp4',
       x: 22, y: 70
     },
     {
       title: 'Kitchen, Sunroom & Living Room',
-      desc: 'The heart of the home — open living flowing into a bright sunroom.',
+      desc: 'The main living area, with the kitchen and living room opening onto a bright sunroom.',
       src: 'https://video.wixstatic.com/video/b61df5_d1702835fbd14118a301534f791821ba/1080p/mp4/file.mp4',
       x: 62, y: 42
     },
     {
       title: 'Laundry Room & Garage',
-      desc: 'Dedicated laundry with direct access to the attached garage.',
+      desc: 'Dedicated laundry room with direct access to the attached garage.',
       src: 'https://video.wixstatic.com/video/b61df5_cd468cbebaf246f3b178e6c699df7720/1080p/mp4/file.mp4',
       x: 82, y: 74
     },
     {
       title: 'Primary Suite — Bath & Closet',
-      desc: 'The private primary suite with full bath and spacious closet.',
+      desc: 'The primary suite, with en-suite bathroom and generous closet.',
       src: 'https://video.wixstatic.com/video/b61df5_4f3ec03aceeb4e5fae975a10b977d0a3/1080p/mp4/file.mp4',
       x: 24, y: 28
     },
     {
       title: 'Backyard',
-      desc: 'Private outdoor space to relax, garden, or entertain.',
+      desc: 'The private backyard and outdoor living space.',
       src: 'https://video.wixstatic.com/video/b61df5_2d185c842f904db3a34ca102a28b21d2/1080p/mp4/file.mp4',
       x: 50, y: 10
     }

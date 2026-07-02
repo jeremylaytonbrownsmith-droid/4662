@@ -73,17 +73,30 @@
   }
   nav.links a:hover { color: var(--brass); }
   @media (max-width: 720px) { nav.links { display: none; } }
+  .switch-pill {
+    display: inline-block;
+    border: 1px solid var(--brass);
+    color: var(--green);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+  .switch-pill:hover { background: var(--green); border-color: var(--green); color: var(--ivory); }
 
-  /* ---------- Hero (photo background) ---------- */
+  /* ---------- Hero ---------- */
   .hero {
     position: relative;
     color: var(--ivory);
     text-align: center;
     padding: 130px 24px 210px;
-    background:
-      linear-gradient(180deg, rgba(24, 30, 19, 0.72) 0%, rgba(36, 46, 31, 0.82) 100%),
-      url('https://www.dropbox.com/scl/fo/736ncgv8mphyv0jsw84ar/AJtU46NXkd-KBumlTeu61TI/Screenshot%202026-07-02%20at%201.38.04%20PM.png?rlkey=46qq5dfpm56r3i8yro1f6ceuq&raw=1') center 35% / cover no-repeat,
-      linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
+    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
+    background-size: cover;
+    background-position: center 35%;
   }
   .hero .eyebrow {
     text-transform: uppercase;
@@ -109,7 +122,7 @@
   }
   .hero .rule { width: 64px; height: 1px; background: var(--brass); margin: 34px auto; }
   .hero p.blurb {
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
     color: rgba(250, 247, 242, 0.92);
     font-size: 1.02rem;
@@ -224,6 +237,20 @@
     letter-spacing: 0.14em;
     padding: 6px 14px;
     border-radius: 3px;
+  }
+  .shot.dead img { visibility: hidden; }
+  .shot.dead::before {
+    content: 'Photo unavailable';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(45deg, #ece6d8, #ece6d8 12px, #e4ddcd 12px, #e4ddcd 24px);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
   }
 
   /* ---------- Lightbox ---------- */
@@ -389,8 +416,8 @@
       <a href="#highlights">Highlights</a>
       <a href="#location">Location</a>
       <a href="#contact">Inquire</a>
-      <a href="../">Crown Parkway &rarr;</a>
     </nav>
+    <a class="switch-pill" href="../">4662 Crown Parkway &#8644;</a>
   </div>
 </header>
 
@@ -401,12 +428,12 @@
   <p class="locale">Morrisville, North Carolina 27560</p>
   <div class="rule"></div>
   <p class="blurb">
-    A bright True Homes townhome in Morrisville's Sterling community &mdash; hardwoods,
-    granite kitchen, cozy fireplace, a versatile loft, a private fenced patio, and a
-    detached two-car garage, minutes from RTP and RDU.
+    A True Homes townhome in Morrisville's Sterling community, offering hardwood
+    floors, a granite kitchen, gas fireplace, versatile loft, private fenced patio,
+    and a detached two-car garage &mdash; two miles from Research Triangle Park.
   </p>
   <div class="cta-row">
-    <a class="btn btn-solid" href="#gallery">See the Photos</a>
+    <a class="btn btn-solid" href="#gallery">View the Photos</a>
     <a class="btn btn-ghost" href="#contact">Check Availability</a>
   </div>
 </div>
@@ -423,10 +450,10 @@
 <section class="gallery-section" id="gallery">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Look Around</p>
+      <p class="eyebrow">The Residence</p>
       <h2>The Photo Tour</h2>
-      <p>Tap any photo to view it full-screen &mdash; then use the arrows to walk
-         through the whole home.</p>
+      <p>Select any photograph to view it in full screen, then use the arrows
+         to continue through the home.</p>
     </div>
     <div class="gallery" id="gallery-grid"><!-- shots injected by script --></div>
   </div>
@@ -450,34 +477,34 @@
     </div>
     <div class="highlights">
       <div class="hl">
-        <h3>Warm, Open Living</h3>
-        <p>Hardwoods run through the first floor, anchored by a cozy corner
+        <h3>Refined Main Level</h3>
+        <p>Hardwood floors run throughout the first floor, anchored by a gas
            fireplace in the family room.</p>
       </div>
       <div class="hl">
         <h3>Granite Island Kitchen</h3>
-        <p>Dark-wood cabinetry, granite counters, stainless appliances, and a big
-           island with seating &mdash; open to the separate dining room.</p>
+        <p>Rich cabinetry, granite countertops, stainless appliances, and a large
+           island with seating, open to the separate dining room.</p>
       </div>
       <div class="hl">
         <h3>Versatile Loft</h3>
-        <p>A roomy second-floor loft that works as a home office, media room,
-           playroom, or guest space.</p>
+        <p>A generous second-floor loft suited to a home office, media room, or
+           additional living space.</p>
       </div>
       <div class="hl">
         <h3>Primary Suite</h3>
-        <p>Comfortable primary bedroom with ceiling fan and a private bath featuring
-           a large walk-in glass shower and granite vanity.</p>
+        <p>A comfortable primary bedroom with an en-suite bath featuring a large
+           walk-in glass shower and granite vanity.</p>
       </div>
       <div class="hl">
         <h3>Private Patio &amp; Garage</h3>
-        <p>A fenced courtyard patio for morning coffee or grilling, leading to your
-           own detached two-car garage.</p>
+        <p>A fenced courtyard patio connects the home to its detached two-car
+           garage.</p>
       </div>
       <div class="hl">
         <h3>Sterling Community</h3>
-        <p>Community pool and tennis, with lawn care handled &mdash; lock-and-leave
-           living two miles from Research Triangle Park.</p>
+        <p>Community pool and tennis courts with exterior maintenance included
+           &mdash; low-maintenance living two miles from Research Triangle Park.</p>
       </div>
     </div>
   </div>
@@ -489,13 +516,13 @@
     <div class="location-inner">
       <div class="location-copy">
         <p class="eyebrow">Morrisville, North Carolina</p>
-        <h2>Two Miles from RTP</h2>
-        <p>397 Shakespeare Drive sits in the Sterling community in Morrisville &mdash;
-           consistently ranked among the best places to live in North Carolina &mdash;
-           with quick access to I-40, I-540, and NC-54.</p>
-        <p>You're minutes from Research Triangle Park employers, RDU International
-           Airport, Lake Crabtree, and the shops and restaurants of Park West Village
-           and Downtown Cary.</p>
+        <h2>Two Miles from Research Triangle Park</h2>
+        <p>397 Shakespeare Drive is located in the Sterling community in
+           Morrisville, consistently ranked among the best places to live in
+           North Carolina, with convenient access to I-40, I-540, and NC-54.</p>
+        <p>Residents are minutes from Research Triangle Park employers, RDU
+           International Airport, Lake Crabtree County Park, and the shopping and
+           dining of Park West Village and Downtown Cary.</p>
         <a class="btn-zillow"
            href="https://www.zillow.com/homedetails/Morrisville-NC-27560/114430698_zpid/"
            target="_blank" rel="noopener">View the Listing on Zillow &rarr;</a>
@@ -514,11 +541,11 @@
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <p class="eyebrow">Interested in the Home?</p>
-    <h2>Schedule a Visit or Ask a Question</h2>
-    <p>If you'd like more information, want to check availability, or would like
-       to see the home in person, reach out any time.</p>
-    <a class="btn btn-solid" href="mailto:jeremy.layton.brown.smith@gmail.com?subject=Inquiry%20%E2%80%94%20397%20Shakespeare%20Drive">Email the Owner</a>
+    <p class="eyebrow">Inquiries</p>
+    <h2>Schedule a Showing</h2>
+    <p>For additional information, current availability, or to arrange a private
+       showing, please reach out &mdash; inquiries are welcome at any time.</p>
+    <a class="btn btn-solid" href="mailto:jeremy.layton.brown.smith@gmail.com?subject=Inquiry%20%E2%80%94%20397%20Shakespeare%20Drive">Contact the Owner</a>
   </div>
 </section>
 
@@ -529,42 +556,81 @@
 </footer>
 
 <script>
-  // Photos live in the owner's public Dropbox folder; ?raw=1 serves the image directly.
-  const BASE = 'https://www.dropbox.com/scl/fo/736ncgv8mphyv0jsw84ar/AJtU46NXkd-KBumlTeu61TI/';
-  const KEY = '?rlkey=46qq5dfpm56r3i8yro1f6ceuq&raw=1';
-  const shot = t => BASE + 'Screenshot%202026-07-02%20at%201.' + t + '%20PM.png' + KEY;
+  // Photos live in the owner's public Dropbox folder. Dropbox serves shared-folder
+  // files under a few different URL shapes; each image tries them in order until
+  // one loads.
+  const FO = '736ncgv8mphyv0jsw84ar/AJtU46NXkd-KBumlTeu61TI';
+  const KEY = 'rlkey=46qq5dfpm56r3i8yro1f6ceuq';
+  const candidates = f => [
+    'https://www.dropbox.com/scl/fo/' + FO + '/' + f + '?' + KEY + '&raw=1',
+    'https://dl.dropboxusercontent.com/scl/fo/' + FO + '/' + f + '?' + KEY,
+    'https://www.dropbox.com/scl/fo/' + FO + '/' + f + '?' + KEY + '&dl=1'
+  ];
+  const fname = t => 'Screenshot%202026-07-02%20at%201.' + t + '%20PM.png';
 
   const PHOTOS = [
-    { file: shot('38.04'), label: 'Front Entrance', wide: true },
-    { file: shot('38.09'), label: 'Living Room & Fireplace' },
-    { file: shot('38.21'), label: 'Kitchen', wide: true },
-    { file: shot('38.26'), label: 'Dining Room' },
-    { file: shot('38.35'), label: 'Private Patio' },
-    { file: shot('39.00'), label: 'Primary Bedroom', wide: true },
-    { file: shot('39.05'), label: 'Primary Bath — Walk-In Shower' },
-    { file: shot('38.45'), label: 'Second Bedroom' },
-    { file: shot('38.51'), label: 'Full Bathroom' },
-    { file: shot('38.56'), label: 'Loft / Flex Space', wide: true },
-    { file: shot('38.41'), label: 'Staircase' },
-    { file: shot('39.10'), label: 'Two-Car Garage' }
+    { file: fname('38.04'), label: 'Front Entrance', wide: true },
+    { file: fname('38.09'), label: 'Living Room & Fireplace' },
+    { file: fname('38.21'), label: 'Kitchen', wide: true },
+    { file: fname('38.26'), label: 'Dining Room' },
+    { file: fname('38.35'), label: 'Private Patio' },
+    { file: fname('39.00'), label: 'Primary Bedroom', wide: true },
+    { file: fname('39.05'), label: 'Primary Bath — Walk-In Shower' },
+    { file: fname('38.45'), label: 'Second Bedroom' },
+    { file: fname('38.51'), label: 'Full Bathroom' },
+    { file: fname('38.56'), label: 'Loft / Flex Space', wide: true },
+    { file: fname('38.41'), label: 'Staircase' },
+    { file: fname('39.10'), label: 'Two-Car Garage' }
   ];
 
   const grid = document.getElementById('gallery-grid');
   PHOTOS.forEach((p, i) => {
     const b = document.createElement('button');
     b.className = 'shot' + (p.wide ? ' wide' : '');
-    b.innerHTML = '<img loading="lazy" src="' + p.file + '" alt="' + p.label + '">' +
-                  '<span class="tag">' + p.label + '</span>';
+    const img = document.createElement('img');
+    const urls = candidates(p.file);
+    let attempt = 0;
+    img.loading = 'lazy';
+    img.alt = p.label;
+    img.src = urls[0];
+    img.onerror = () => {
+      attempt += 1;
+      if (attempt < urls.length) {
+        img.src = urls[attempt];
+      } else {
+        b.classList.add('dead');
+      }
+    };
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = p.label;
+    b.appendChild(img);
+    b.appendChild(tag);
     b.addEventListener('click', () => openLb(i));
     grid.appendChild(b);
   });
 
-  // Lightbox with prev/next.
+  // Hero background: probe the front-exterior photo and apply whichever URL
+  // shape loads; the green gradient remains as the fallback.
+  (function heroBg() {
+    const urls = candidates(PHOTOS[0].file);
+    let i = 0;
+    const probe = new Image();
+    probe.onload = () => {
+      document.querySelector('.hero').style.backgroundImage =
+        'linear-gradient(180deg, rgba(24,30,19,0.72) 0%, rgba(36,46,31,0.82) 100%), url("' + probe.src + '")';
+    };
+    probe.onerror = () => { i += 1; if (i < urls.length) probe.src = urls[i]; };
+    probe.src = urls[0];
+  })();
+
+  // Lightbox with prev/next; reuses whichever URL each grid image resolved to.
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbCaption = document.getElementById('lbCaption');
   let cur = 0;
 
+  function gridSrc(i) { return grid.children[i].querySelector('img').src; }
   function openLb(i) {
     cur = i;
     render();
@@ -572,7 +638,7 @@
     document.body.style.overflow = 'hidden';
   }
   function render() {
-    lbImg.src = PHOTOS[cur].file;
+    lbImg.src = gridSrc(cur);
     lbImg.alt = PHOTOS[cur].label;
     lbCaption.textContent = (cur + 1) + ' / ' + PHOTOS.length + ' — ' + PHOTOS[cur].label;
   }
