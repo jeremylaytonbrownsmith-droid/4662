@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>4662 Crown Parkway &middot; Morrisville, NC 27560</title>
-<meta name="description" content="Video tour and floor plan for 4662 Crown Parkway, Morrisville, NC 27560 — a 3 bedroom, 2 bath home with sunroom, laundry room, garage, and private backyard.">
+<meta name="description" content="Interactive video tour and floor plan for 4662 Crown Parkway, Morrisville, NC 27560 — a 3 bedroom, 2 bath home with sunroom, laundry room, garage, and private backyard.">
 <style>
   :root {
     --ivory: #faf7f2;
@@ -34,6 +34,7 @@
   }
 
   img, video { max-width: 100%; display: block; }
+  button { font-family: inherit; }
 
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
@@ -84,8 +85,7 @@
       linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
     color: var(--ivory);
     text-align: center;
-    padding: 96px 24px 200px;
-    position: relative;
+    padding: 88px 24px 190px;
   }
   .hero .eyebrow {
     text-transform: uppercase;
@@ -108,12 +108,7 @@
     color: rgba(250, 247, 242, 0.78);
     margin-top: 16px;
   }
-  .hero .rule {
-    width: 64px;
-    height: 1px;
-    background: var(--brass);
-    margin: 34px auto;
-  }
+  .hero .rule { width: 64px; height: 1px; background: var(--brass); margin: 34px auto; }
   .hero p.blurb {
     max-width: 620px;
     margin: 0 auto;
@@ -129,11 +124,13 @@
     letter-spacing: 0.16em;
     text-decoration: none;
     border-radius: 2px;
+    border: none;
+    cursor: pointer;
     transition: all 0.25s ease;
   }
   .btn-solid { background: var(--brass); color: var(--green-deep); }
   .btn-solid:hover { background: var(--brass-soft); }
-  .btn-ghost { border: 1px solid rgba(250, 247, 242, 0.45); color: var(--ivory); }
+  .btn-ghost { border: 1px solid rgba(250, 247, 242, 0.45); color: var(--ivory); background: transparent; }
   .btn-ghost:hover { border-color: var(--brass); color: var(--brass-soft); }
 
   /* ---------- Stats bar ---------- */
@@ -152,12 +149,7 @@
   }
   .stat { padding: 30px 12px; border-left: 1px solid var(--line); }
   .stat:first-child { border-left: none; }
-  .stat .num {
-    font-family: var(--serif);
-    font-size: 2rem;
-    color: var(--green);
-    line-height: 1.1;
-  }
+  .stat .num { font-family: var(--serif); font-size: 2rem; color: var(--green); line-height: 1.1; }
   .stat .label {
     text-transform: uppercase;
     letter-spacing: 0.14em;
@@ -172,8 +164,8 @@
   }
 
   /* ---------- Section scaffolding ---------- */
-  section { padding: 92px 0; }
-  .sec-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  section { padding: 88px 0; }
+  .sec-head { text-align: center; max-width: 660px; margin: 0 auto 48px; }
   .sec-head .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.3em;
@@ -190,80 +182,116 @@
   }
   .sec-head p { color: var(--ink-soft); margin-top: 16px; font-size: 0.98rem; }
 
-  /* ---------- Featured video ---------- */
-  .feature-card {
-    background: var(--green-deep);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 30px 70px -30px rgba(36, 46, 31, 0.55);
-  }
-  .feature-card video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #101408; }
-  .feature-card .caption {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding: 22px 28px;
-    color: var(--ivory);
-  }
-  .feature-card .caption h3 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; }
-  .feature-card .caption p { color: rgba(250, 247, 242, 0.7); font-size: 0.9rem; }
-
-  /* ---------- Video grid ---------- */
-  .tour-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 36px;
-    margin-top: 44px;
-  }
-  @media (max-width: 820px) { .tour-grid { grid-template-columns: 1fr; } }
-  .tour-card {
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .tour-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 22px 44px -22px rgba(36, 46, 31, 0.35);
-  }
-  .tour-card video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #101408; }
-  .tour-card .meta { padding: 22px 24px 26px; }
-  .tour-card .kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.66rem;
-    color: var(--brass);
-    margin-bottom: 8px;
-  }
-  .tour-card h3 {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 1.28rem;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-  .tour-card p { color: var(--ink-soft); font-size: 0.92rem; }
-
-  /* ---------- Floor plan ---------- */
-  .plan-section { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  /* ---------- Interactive floor plan ---------- */
   .plan-frame {
+    position: relative;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 6px;
-    padding: clamp(16px, 4vw, 48px);
+    padding: clamp(14px, 3vw, 36px);
     box-shadow: 0 24px 56px -28px rgba(36, 46, 31, 0.3);
-    cursor: zoom-in;
     max-width: 880px;
     margin: 0 auto;
   }
-  .plan-frame img { width: 100%; height: auto; }
+  .plan-inner { position: relative; }
+  .plan-inner img { width: 100%; height: auto; }
+  .pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(36, 46, 31, 0.45);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .pin:hover, .pin.active { background: var(--brass); transform: translate(-50%, -50%) scale(1.18); }
+  .pin::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green-deep);
+    color: var(--ivory);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .pin:hover::after { opacity: 1; }
+  .expand-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(36, 46, 31, 0.85);
+    color: var(--ivory);
+    border: none;
+    border-radius: 3px;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+  .expand-btn:hover { background: var(--green); }
+
+  .plan-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 880px;
+    margin: 26px auto 0;
+  }
+  .legend-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 18px 8px 8px;
+    font-size: 0.86rem;
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .legend-chip:hover, .legend-chip.active {
+    border-color: var(--brass);
+    box-shadow: 0 6px 18px -8px rgba(176, 141, 79, 0.55);
+  }
+  .legend-chip .dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .legend-chip.active .dot, .legend-chip:hover .dot { background: var(--brass); }
   .plan-hint {
     text-align: center;
-    margin-top: 18px;
-    font-size: 0.8rem;
+    margin-top: 16px;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--ink-soft);
@@ -296,7 +324,6 @@
     color: var(--ivory);
     font-size: 2rem;
     line-height: 1;
-    font-family: var(--sans);
     background: none;
     border: none;
     cursor: pointer;
@@ -304,17 +331,78 @@
   }
   .lightbox .close:hover { opacity: 1; }
 
-  /* ---------- Highlights ---------- */
-  .highlights {
+  /* ---------- Tour theater ---------- */
+  .tour-section { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .theater {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    gap: 28px;
+    align-items: start;
   }
+  @media (max-width: 880px) { .theater { grid-template-columns: 1fr; } }
+  .stage {
+    background: var(--green-deep);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px -30px rgba(36, 46, 31, 0.55);
+    position: sticky;
+    top: 84px;
+  }
+  @media (max-width: 880px) { .stage { position: static; } }
+  .stage video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #101408; }
+  .stage .caption { padding: 20px 26px 24px; color: var(--ivory); }
+  .stage .caption .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.68rem;
+    color: var(--brass-soft);
+    margin-bottom: 6px;
+  }
+  .stage .caption h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; }
+  .stage .caption p { color: rgba(250, 247, 242, 0.72); font-size: 0.9rem; margin-top: 6px; }
+
+  .playlist { display: flex; flex-direction: column; gap: 10px; }
+  .track {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .track:hover { border-color: var(--brass); transform: translateX(3px); }
+  .track.active {
+    border-color: var(--brass);
+    box-shadow: 0 10px 26px -12px rgba(176, 141, 79, 0.6);
+    background: #fffdf8;
+  }
+  .track .num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .track.active .num, .track:hover .num { background: var(--brass); }
+  .track .t-title { font-family: var(--serif); font-size: 1.02rem; color: var(--ink); line-height: 1.3; }
+  .track .t-desc { font-size: 0.78rem; color: var(--ink-soft); margin-top: 2px; line-height: 1.4; }
+  .track .play-ic { margin-left: auto; color: var(--brass); font-size: 0.85rem; flex-shrink: 0; }
+
+  /* ---------- Highlights ---------- */
+  .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   @media (max-width: 820px) { .highlights { grid-template-columns: 1fr; } }
-  .hl {
-    border-top: 2px solid var(--brass);
-    padding-top: 22px;
-  }
+  .hl { border-top: 2px solid var(--brass); padding-top: 22px; }
   .hl h3 { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; margin-bottom: 10px; }
   .hl p { color: var(--ink-soft); font-size: 0.93rem; }
 
@@ -342,6 +430,20 @@
     margin-bottom: 18px;
   }
   .location-copy p { color: var(--ink-soft); font-size: 0.97rem; margin-bottom: 14px; }
+  .btn-zillow {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 26px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  .btn-zillow:hover { background: var(--green); color: var(--ivory); }
   .map-frame {
     border: 1px solid var(--line);
     border-radius: 6px;
@@ -389,8 +491,8 @@
   <div class="nav-inner">
     <a class="brand" href="#top">4662 <span>&middot;</span> Crown Parkway</a>
     <nav class="links">
-      <a href="#tour">Video Tour</a>
       <a href="#floorplan">Floor Plan</a>
+      <a href="#tour">Video Tour</a>
       <a href="#highlights">Highlights</a>
       <a href="#location">Location</a>
       <a href="#contact">Inquire</a>
@@ -407,11 +509,11 @@
   <p class="blurb">
     A bright, comfortable three-bedroom home in the heart of the Triangle &mdash;
     with a sun-filled living space, private backyard, and an easy commute to
-    RTP, RDU, Cary, and Raleigh. Take the full video tour below.
+    RTP, RDU, Cary, and Raleigh. Explore it room by room below.
   </p>
   <div class="cta-row">
-    <a class="btn btn-solid" href="#tour">Watch the Tour</a>
-    <a class="btn btn-ghost" href="#floorplan">View Floor Plan</a>
+    <a class="btn btn-solid" href="#floorplan">Explore the Floor Plan</a>
+    <a class="btn btn-ghost" href="#tour">Watch the Tour</a>
   </div>
 </div>
 
@@ -423,101 +525,26 @@
   <div class="stat"><div class="num">Yes</div><div class="label">Garage &amp; Laundry</div></div>
 </div>
 
-<!-- ============ VIDEO TOUR ============ -->
-<section id="tour">
+<!-- ============ INTERACTIVE FLOOR PLAN ============ -->
+<section id="floorplan">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Walk Through Every Room</p>
-      <h2>The Video Tour</h2>
-      <p>Each video below walks through a section of the home, in the same order
-         you'd experience it in person &mdash; from the front door to the backyard.</p>
+      <p class="eyebrow">Start Here</p>
+      <h2>Explore the Home by Floor Plan</h2>
+      <p>Tap a numbered marker on the plan &mdash; or a room below it &mdash; and
+         the matching video tour will start playing.</p>
     </div>
-
-    <!-- Featured: main living spaces -->
-    <div class="feature-card">
-      <video controls preload="metadata" playsinline>
-        <source src="https://video.wixstatic.com/video/b61df5_d1702835fbd14118a301534f791821ba/1080p/mp4/file.mp4" type="video/mp4">
-        Your browser does not support embedded video.
-      </video>
-      <div class="caption">
-        <h3>Kitchen, Sunroom &amp; Living Room</h3>
-        <p>The heart of the home &mdash; open living space flowing into a bright sunroom</p>
+    <div class="plan-frame">
+      <div class="plan-inner" id="planInner">
+        <img id="planImg"
+             src="https://static.wixstatic.com/media/b61df5_07f6d39ac4be4d36952f8212aebcdb2a~mv2.png"
+             alt="Floor plan of 4662 Crown Parkway, Morrisville, NC">
+        <!-- pins injected by script -->
       </div>
+      <button class="expand-btn" id="expandBtn" aria-label="Enlarge floor plan">&#x26F6; Enlarge</button>
     </div>
-
-    <div class="tour-grid">
-      <div class="tour-card">
-        <video controls preload="metadata" playsinline>
-          <source src="https://video.wixstatic.com/video/b61df5_ffad600b2514465b84f0a22abab99f9c/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-        <div class="meta">
-          <p class="kicker">Tour &middot; 01</p>
-          <h3>Entryway</h3>
-          <p>Your first steps inside &mdash; the welcoming front entry that sets the tone for the home.</p>
-        </div>
-      </div>
-
-      <div class="tour-card">
-        <video controls preload="metadata" playsinline>
-          <source src="https://video.wixstatic.com/video/b61df5_c970379ab9a74d77bea1934101254426/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-        <div class="meta">
-          <p class="kicker">Tour &middot; 02</p>
-          <h3>Front Bedrooms &amp; Shared Bath</h3>
-          <p>Two comfortable bedrooms at the front of the house, with a full bathroom conveniently between them.</p>
-        </div>
-      </div>
-
-      <div class="tour-card">
-        <video controls preload="metadata" playsinline>
-          <source src="https://video.wixstatic.com/video/b61df5_4f3ec03aceeb4e5fae975a10b977d0a3/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-        <div class="meta">
-          <p class="kicker">Tour &middot; 03</p>
-          <h3>Primary Suite &mdash; Bath &amp; Closet</h3>
-          <p>The private primary suite, featuring its own full bathroom and a spacious closet.</p>
-        </div>
-      </div>
-
-      <div class="tour-card">
-        <video controls preload="metadata" playsinline>
-          <source src="https://video.wixstatic.com/video/b61df5_cd468cbebaf246f3b178e6c699df7720/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-        <div class="meta">
-          <p class="kicker">Tour &middot; 04</p>
-          <h3>Laundry Room &amp; Garage</h3>
-          <p>A dedicated laundry room and attached garage &mdash; practical space for daily life and storage.</p>
-        </div>
-      </div>
-
-      <div class="tour-card">
-        <video controls preload="metadata" playsinline>
-          <source src="https://video.wixstatic.com/video/b61df5_2d185c842f904db3a34ca102a28b21d2/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-        <div class="meta">
-          <p class="kicker">Tour &middot; 05</p>
-          <h3>Backyard</h3>
-          <p>Step outside to the private backyard &mdash; room to relax, garden, or entertain.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FLOOR PLAN ============ -->
-<section class="plan-section" id="floorplan">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">See How It All Connects</p>
-      <h2>The Floor Plan</h2>
-      <p>Follow along with the videos using the layout below to get a true feel
-         for how the rooms flow together.</p>
-    </div>
-    <div class="plan-frame" id="planFrame">
-      <img src="https://static.wixstatic.com/media/b61df5_07f6d39ac4be4d36952f8212aebcdb2a~mv2.png"
-           alt="Floor plan of 4662 Crown Parkway, Morrisville, NC" loading="lazy">
-    </div>
-    <p class="plan-hint">Click the floor plan to enlarge</p>
+    <div class="plan-legend" id="planLegend"><!-- chips injected by script --></div>
+    <p class="plan-hint">Markers are approximate &mdash; each one plays that room's video</p>
   </div>
 </section>
 
@@ -526,6 +553,32 @@
   <img src="https://static.wixstatic.com/media/b61df5_07f6d39ac4be4d36952f8212aebcdb2a~mv2.png"
        alt="Floor plan of 4662 Crown Parkway, enlarged">
 </div>
+
+<!-- ============ VIDEO TOUR THEATER ============ -->
+<section class="tour-section" id="tour">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Walk Through Every Room</p>
+      <h2>The Video Tour</h2>
+      <p>One player, six stops &mdash; in the same order you'd walk the home.
+         Pick any room from the list to jump around.</p>
+    </div>
+    <div class="theater">
+      <div class="stage">
+        <video id="stageVideo" controls preload="metadata" playsinline>
+          <source id="stageSource" src="" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="caption">
+          <p class="kicker" id="stageKicker">Tour &middot; 01</p>
+          <h3 id="stageTitle"></h3>
+          <p id="stageDesc"></p>
+        </div>
+      </div>
+      <div class="playlist" id="playlist"><!-- tracks injected by script --></div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ HIGHLIGHTS ============ -->
 <section id="highlights">
@@ -582,6 +635,9 @@
         <p>You're minutes from Research Triangle Park employers, RDU International
            Airport, Lake Crabtree, and the shops and restaurants of Park West
            Village and Downtown Cary.</p>
+        <a class="btn-zillow"
+           href="https://www.zillow.com/homedetails/4662-Crown-Pkwy-Morrisville-NC-27560/114429980_zpid/"
+           target="_blank" rel="noopener">View the Listing on Zillow &rarr;</a>
       </div>
       <div class="map-frame">
         <iframe
@@ -610,17 +666,123 @@
 </footer>
 
 <script>
-  // Only one video plays at a time.
-  const videos = document.querySelectorAll('video');
-  videos.forEach(v => {
-    v.addEventListener('play', () => {
-      videos.forEach(other => { if (other !== v) other.pause(); });
-    });
+  // The tour, in walk-through order. Pin positions (x/y) are percentages
+  // across the floor plan image — adjust them to match the actual rooms.
+  const TOUR = [
+    {
+      title: 'Entryway',
+      desc: 'Your first steps inside — the welcoming front entry.',
+      src: 'https://video.wixstatic.com/video/b61df5_ffad600b2514465b84f0a22abab99f9c/1080p/mp4/file.mp4',
+      x: 50, y: 82
+    },
+    {
+      title: 'Front Bedrooms & Shared Bath',
+      desc: 'Two comfortable bedrooms with a full bathroom between them.',
+      src: 'https://video.wixstatic.com/video/b61df5_c970379ab9a74d77bea1934101254426/1080p/mp4/file.mp4',
+      x: 22, y: 70
+    },
+    {
+      title: 'Kitchen, Sunroom & Living Room',
+      desc: 'The heart of the home — open living flowing into a bright sunroom.',
+      src: 'https://video.wixstatic.com/video/b61df5_d1702835fbd14118a301534f791821ba/1080p/mp4/file.mp4',
+      x: 62, y: 42
+    },
+    {
+      title: 'Laundry Room & Garage',
+      desc: 'Dedicated laundry with direct access to the attached garage.',
+      src: 'https://video.wixstatic.com/video/b61df5_cd468cbebaf246f3b178e6c699df7720/1080p/mp4/file.mp4',
+      x: 82, y: 74
+    },
+    {
+      title: 'Primary Suite — Bath & Closet',
+      desc: 'The private primary suite with full bath and spacious closet.',
+      src: 'https://video.wixstatic.com/video/b61df5_4f3ec03aceeb4e5fae975a10b977d0a3/1080p/mp4/file.mp4',
+      x: 24, y: 28
+    },
+    {
+      title: 'Backyard',
+      desc: 'Private outdoor space to relax, garden, or entertain.',
+      src: 'https://video.wixstatic.com/video/b61df5_2d185c842f904db3a34ca102a28b21d2/1080p/mp4/file.mp4',
+      x: 50, y: 10
+    }
+  ];
+
+  const planInner = document.getElementById('planInner');
+  const legend = document.getElementById('planLegend');
+  const playlist = document.getElementById('playlist');
+  const stageVideo = document.getElementById('stageVideo');
+  const stageSource = document.getElementById('stageSource');
+  const stageKicker = document.getElementById('stageKicker');
+  const stageTitle = document.getElementById('stageTitle');
+  const stageDesc = document.getElementById('stageDesc');
+
+  const pad = n => String(n + 1).padStart(2, '0');
+
+  TOUR.forEach((room, i) => {
+    const pin = document.createElement('button');
+    pin.className = 'pin';
+    pin.textContent = i + 1;
+    pin.dataset.label = room.title;
+    pin.style.left = room.x + '%';
+    pin.style.top = room.y + '%';
+    pin.setAttribute('aria-label', 'Play video: ' + room.title);
+    pin.addEventListener('click', () => selectRoom(i, true));
+    planInner.appendChild(pin);
+
+    const chip = document.createElement('button');
+    chip.className = 'legend-chip';
+    chip.innerHTML = '<span class="dot">' + (i + 1) + '</span>' + room.title;
+    chip.addEventListener('click', () => selectRoom(i, true));
+    legend.appendChild(chip);
+
+    const track = document.createElement('button');
+    track.className = 'track';
+    track.innerHTML =
+      '<span class="num">' + (i + 1) + '</span>' +
+      '<span><span class="t-title">' + room.title + '</span>' +
+      '<br><span class="t-desc">' + room.desc + '</span></span>' +
+      '<span class="play-ic">&#9654;</span>';
+    track.addEventListener('click', () => selectRoom(i, false));
+    playlist.appendChild(track);
   });
+
+  function selectRoom(i, scrollToPlayer) {
+    const room = TOUR[i];
+    stageSource.src = room.src;
+    stageVideo.load();
+    stageKicker.textContent = 'Tour · ' + pad(i);
+    stageTitle.textContent = room.title;
+    stageDesc.textContent = room.desc;
+
+    document.querySelectorAll('.pin').forEach((p, j) => p.classList.toggle('active', j === i));
+    document.querySelectorAll('.legend-chip').forEach((c, j) => c.classList.toggle('active', j === i));
+    document.querySelectorAll('.track').forEach((t, j) => t.classList.toggle('active', j === i));
+
+    const startPlayback = () => stageVideo.play().catch(() => {});
+    if (scrollToPlayer) {
+      document.getElementById('tour').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(startPlayback, 450);
+    } else {
+      startPlayback();
+    }
+  }
+
+  // Load the first stop (entryway) without autoplaying.
+  (function init() {
+    const room = TOUR[0];
+    stageSource.src = room.src;
+    stageVideo.load();
+    stageKicker.textContent = 'Tour · 01';
+    stageTitle.textContent = room.title;
+    stageDesc.textContent = room.desc;
+    document.querySelector('.pin').classList.add('active');
+    document.querySelector('.legend-chip').classList.add('active');
+    document.querySelector('.track').classList.add('active');
+  })();
 
   // Floor plan lightbox.
   const lightbox = document.getElementById('lightbox');
-  document.getElementById('planFrame').addEventListener('click', () => {
+  document.getElementById('expandBtn').addEventListener('click', () => {
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   });
@@ -629,9 +791,7 @@
     document.body.style.overflow = '';
   }
   lightbox.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeLightbox();
-  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
