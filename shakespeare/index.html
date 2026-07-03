@@ -94,9 +94,10 @@
     color: var(--ivory);
     text-align: center;
     padding: 130px 24px 210px;
-    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
-    background-size: cover;
-    background-position: center 35%;
+    background:
+      linear-gradient(180deg, rgba(24, 30, 19, 0.72) 0%, rgba(36, 46, 31, 0.82) 100%),
+      url('https://static.wixstatic.com/media/b61df5_7af2edbdeb78428da97e2850f33db1ba~mv2.png') center 35% / cover no-repeat,
+      linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
   }
   .hero .eyebrow {
     text-transform: uppercase;
@@ -482,9 +483,9 @@
            fireplace in the family room.</p>
       </div>
       <div class="hl">
-        <h3>Granite Island Kitchen</h3>
-        <p>Rich cabinetry, granite countertops, stainless appliances, and a large
-           island with seating, open to the separate dining room.</p>
+        <h3>Huge Granite Island</h3>
+        <p>The kitchen centers on a huge granite island with bar seating, framed by
+           rich cabinetry and stainless appliances, open to the separate dining room.</p>
       </div>
       <div class="hl">
         <h3>Versatile Loft</h3>
@@ -556,31 +557,21 @@
 </footer>
 
 <script>
-  // Photos live in the owner's public Dropbox folder. Dropbox serves shared-folder
-  // files under a few different URL shapes; each image tries them in order until
-  // one loads.
-  const FO = '736ncgv8mphyv0jsw84ar/AJtU46NXkd-KBumlTeu61TI';
-  const KEY = 'rlkey=46qq5dfpm56r3i8yro1f6ceuq';
-  const candidates = f => [
-    'https://www.dropbox.com/scl/fo/' + FO + '/' + f + '?' + KEY + '&raw=1',
-    'https://dl.dropboxusercontent.com/scl/fo/' + FO + '/' + f + '?' + KEY,
-    'https://www.dropbox.com/scl/fo/' + FO + '/' + f + '?' + KEY + '&dl=1'
-  ];
-  const fname = t => 'Screenshot%202026-07-02%20at%201.' + t + '%20PM.png';
+  // Photos are hosted in the owner's Wix media library.
+  const wix = id => 'https://static.wixstatic.com/media/' + id + '~mv2.png';
 
   const PHOTOS = [
-    { file: fname('38.04'), label: 'Front Entrance', wide: true },
-    { file: fname('38.09'), label: 'Living Room & Fireplace' },
-    { file: fname('38.21'), label: 'Kitchen', wide: true },
-    { file: fname('38.26'), label: 'Dining Room' },
-    { file: fname('38.35'), label: 'Private Patio' },
-    { file: fname('39.00'), label: 'Primary Bedroom', wide: true },
-    { file: fname('39.05'), label: 'Primary Bath — Walk-In Shower' },
-    { file: fname('38.45'), label: 'Second Bedroom' },
-    { file: fname('38.51'), label: 'Full Bathroom' },
-    { file: fname('38.56'), label: 'Loft / Flex Space', wide: true },
-    { file: fname('38.41'), label: 'Staircase' },
-    { file: fname('39.10'), label: 'Two-Car Garage' }
+    { file: wix('b61df5_7af2edbdeb78428da97e2850f33db1ba'), label: 'Front of the Home', wide: true },
+    { file: wix('b61df5_9b11df50846044e3adb68c9bcc2b1db4'), label: 'Living Room & Fireplace' },
+    { file: wix('b61df5_234cc02347f345e1beb239e378877c51'), label: 'Kitchen & Huge Island', wide: true },
+    { file: wix('b61df5_083facf36dfe4e4e9186a6ca2cddca52'), label: 'Dining Room' },
+    { file: wix('b61df5_f652c124c39b4baf81a92513e05c866d'), label: 'Private Courtyard Patio' },
+    { file: wix('b61df5_45a8ce19618f46f8a717d1bcadf74190'), label: 'Primary Bedroom', wide: true },
+    { file: wix('b61df5_f4100535007b491dbca6aa6ace2e1dc6'), label: 'Primary Bath — Walk-In Shower' },
+    { file: wix('b61df5_47123ae9e83a429b856f2af074d1e111'), label: 'Guest Bedroom' },
+    { file: wix('b61df5_55996e5d2cd9492c8d35f14278ecb484'), label: 'Loft / Flex Space', wide: true },
+    { file: wix('b61df5_fd6838ec201f41c9b0de66686f38855a'), label: 'Staircase' },
+    { file: wix('b61df5_63f9ed876d434ce38cca78d8a5fcfde7'), label: 'Community Pool at the Clubhouse' }
   ];
 
   const grid = document.getElementById('gallery-grid');
@@ -588,19 +579,10 @@
     const b = document.createElement('button');
     b.className = 'shot' + (p.wide ? ' wide' : '');
     const img = document.createElement('img');
-    const urls = candidates(p.file);
-    let attempt = 0;
     img.loading = 'lazy';
     img.alt = p.label;
-    img.src = urls[0];
-    img.onerror = () => {
-      attempt += 1;
-      if (attempt < urls.length) {
-        img.src = urls[attempt];
-      } else {
-        b.classList.add('dead');
-      }
-    };
+    img.src = p.file;
+    img.onerror = () => b.classList.add('dead');
     const tag = document.createElement('span');
     tag.className = 'tag';
     tag.textContent = p.label;
@@ -609,20 +591,6 @@
     b.addEventListener('click', () => openLb(i));
     grid.appendChild(b);
   });
-
-  // Hero background: probe the front-exterior photo and apply whichever URL
-  // shape loads; the green gradient remains as the fallback.
-  (function heroBg() {
-    const urls = candidates(PHOTOS[0].file);
-    let i = 0;
-    const probe = new Image();
-    probe.onload = () => {
-      document.querySelector('.hero').style.backgroundImage =
-        'linear-gradient(180deg, rgba(24,30,19,0.72) 0%, rgba(36,46,31,0.82) 100%), url("' + probe.src + '")';
-    };
-    probe.onerror = () => { i += 1; if (i < urls.length) probe.src = urls[i]; };
-    probe.src = urls[0];
-  })();
 
   // Lightbox with prev/next; reuses whichever URL each grid image resolved to.
   const lb = document.getElementById('lightbox');
