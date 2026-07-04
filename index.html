@@ -91,6 +91,11 @@
     transition: all 0.2s ease;
   }
   .switch-pill:hover { background: var(--green); border-color: var(--green); color: var(--ivory); }
+  @media (max-width: 720px) {
+    .nav-inner { padding: 12px 14px; gap: 10px; }
+    .brand { font-size: 0.88rem; letter-spacing: 0.02em; }
+    .switch-pill { padding: 6px 12px; font-size: 0.6rem; letter-spacing: 0.08em; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -195,6 +200,11 @@
     line-height: 1.15;
   }
   .sec-head p { color: var(--ink-soft); margin-top: 16px; font-size: 0.98rem; }
+  @media (max-width: 640px) {
+    section { padding: 60px 0; }
+    .hero { padding: 72px 20px 160px; }
+    .hero .cta-row .btn { width: 100%; max-width: 320px; }
+  }
 
   /* ---------- Interactive floor plan ---------- */
   .plan-frame {
@@ -247,6 +257,10 @@
     transition: opacity 0.2s ease;
   }
   .pin:hover::after { opacity: 1; }
+  @media (max-width: 640px) {
+    .pin { width: 40px; height: 40px; font-size: 0.95rem; }
+    .legend-chip { font-size: 0.8rem; padding: 7px 14px 7px 7px; }
+  }
   .expand-btn {
     position: absolute;
     top: 10px;

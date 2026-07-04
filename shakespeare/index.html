@@ -87,6 +87,11 @@
     transition: all 0.2s ease;
   }
   .switch-pill:hover { background: var(--green); border-color: var(--green); color: var(--ivory); }
+  @media (max-width: 720px) {
+    .nav-inner { padding: 12px 14px; gap: 10px; }
+    .brand { font-size: 0.88rem; letter-spacing: 0.02em; }
+    .switch-pill { padding: 6px 12px; font-size: 0.6rem; letter-spacing: 0.08em; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -195,6 +200,11 @@
     line-height: 1.15;
   }
   .sec-head p { color: var(--ink-soft); margin-top: 16px; font-size: 0.98rem; }
+  @media (max-width: 640px) {
+    section { padding: 60px 0; }
+    .hero { padding: 84px 20px 170px; }
+    .hero .cta-row .btn { width: 100%; max-width: 320px; }
+  }
 
   /* ---------- Photo gallery ---------- */
   .gallery-section { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -318,6 +328,21 @@
     opacity: 0.8;
   }
   .lb-close:hover { opacity: 1; }
+  @media (max-width: 640px) {
+    .lightbox { padding: 14px; }
+    .lb-btn { width: 42px; height: 42px; font-size: 1.15rem; }
+    .lb-prev { left: 8px; }
+    .lb-next { right: 8px; }
+    .lb-caption {
+      font-size: 0.68rem;
+      padding: 6px 12px;
+      max-width: 92vw;
+      white-space: normal;
+      text-align: center;
+      bottom: 16px;
+    }
+    .lightbox img { max-height: 76vh; }
+  }
 
   /* ---------- Highlights ---------- */
   .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
