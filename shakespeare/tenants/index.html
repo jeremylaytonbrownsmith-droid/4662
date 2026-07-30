@@ -86,12 +86,14 @@
     display: block;
     text-align: center;
     padding: 20px 14px;
-    border: 1px dashed var(--brass);
+    border: 1px solid var(--brass);
     border-radius: 5px;
     color: var(--ink);
     text-decoration: none;
     font-size: 0.92rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
   }
+  .doc:hover { box-shadow: 0 10px 24px -12px rgba(176, 141, 79, 0.6); transform: translateY(-2px); }
   .doc strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.08rem; margin-bottom: 4px; }
   .doc span { color: var(--ink-soft); font-size: 0.78rem; }
   footer {
@@ -129,13 +131,15 @@
   <div class="card">
     <h2>Your Documents</h2>
     <div class="docs">
-      <a class="doc" href="#">
+      <a class="doc" target="_blank" rel="noopener"
+         href="https://www.dropbox.com/scl/fi/ogorrvv9plvu4yx733wvb/Lease-Carey-397-Shakespeare-Dr-1.docx?rlkey=brvyf3f6n59sz62r6vobtuuke&dl=0">
         <strong>Lease Agreement</strong>
-        <span>Link coming soon</span>
+        <span>View or download (Word)</span>
       </a>
-      <a class="doc" href="#">
-        <strong>Move-In Guide</strong>
-        <span>Link coming soon</span>
+      <a class="doc" target="_blank" rel="noopener"
+         href="https://www.dropbox.com/scl/fi/eiantln8yq5jbwjq831q0/Tenant-Cheat-Sheet-397-Shakespeare-1.pdf?rlkey=8ntuisovsqzyyqfsakf9u8rhn&dl=0">
+        <strong>Tenant Cheat Sheet</strong>
+        <span>View or download (PDF)</span>
       </a>
     </div>
   </div>
