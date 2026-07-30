@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenant Information &middot; 4662 Crown Parkway</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --ivory: #faf7f2;
+    --cream: #f3eee4;
+    --ink: #22271f;
+    --ink-soft: #4a5142;
+    --green: #33402c;
+    --green-deep: #242e1f;
+    --brass: #b08d4f;
+    --brass-soft: #d8c49a;
+    --line: rgba(34, 39, 31, 0.14);
+    --serif: Georgia, "Times New Roman", Times, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  .top {
+    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
+    color: var(--ivory);
+    text-align: center;
+    padding: 56px 20px 48px;
+  }
+  .top .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: var(--brass-soft);
+    margin-bottom: 14px;
+  }
+  .top h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 5vw, 2.6rem); }
+  .top p { color: rgba(250, 247, 242, 0.8); font-size: 0.95rem; margin-top: 10px; }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 26px 26px 28px;
+    margin: 26px 0;
+    box-shadow: 0 14px 34px -20px rgba(36, 46, 31, 0.25);
+  }
+  .card.emergency { border-top: 3px solid var(--brass); }
+  .card h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+  .card p, .card li { color: var(--ink-soft); font-size: 0.95rem; }
+  .card ul { padding-left: 20px; }
+  .card li { margin: 7px 0; }
+  .contact-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .cbtn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    background: var(--green);
+    color: var(--ivory);
+    transition: background 0.2s ease;
+  }
+  .cbtn:hover { background: var(--green-deep); }
+  .cbtn.alt { background: var(--brass); color: var(--green-deep); }
+  .cbtn.alt:hover { background: var(--brass-soft); }
+  .docs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  @media (max-width: 520px) { .docs { grid-template-columns: 1fr; } }
+  .doc {
+    display: block;
+    text-align: center;
+    padding: 20px 14px;
+    border: 1px dashed var(--brass);
+    border-radius: 5px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  .doc strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.08rem; margin-bottom: 4px; }
+  .doc span { color: var(--ink-soft); font-size: 0.78rem; }
+  .yard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  @media (max-width: 520px) { .yard-grid { grid-template-columns: 1fr; } }
+  .yard-grid img { border-radius: 5px; width: 100%; height: 210px; object-fit: cover; }
+  .note { font-size: 0.82rem; color: var(--ink-soft); margin-top: 10px; }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    padding: 30px 20px 44px;
+  }
+  footer a { color: var(--brass); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <p class="eyebrow">Tenant Information</p>
+  <h1>4662 Crown Parkway</h1>
+  <p>Morrisville, NC 27560 &middot; Everything you need in one place</p>
+</div>
+
+<div class="wrap">
+
+  <div class="card emergency">
+    <h2>Emergencies &amp; Contact</h2>
+    <p>If an emergency happens, please call or text <strong>Jeremy Smith</strong>
+       at <a href="tel:13369062176" style="color:var(--green);font-weight:600;">(336) 906-2176</a>
+       or email <a href="mailto:jls5797@gmail.com" style="color:var(--green);font-weight:600;">jls5797@gmail.com</a>.</p>
+    <p style="margin-top:10px;">For fire, medical, or any life-threatening emergency, always call <strong>911 first</strong>.
+       If you smell gas, leave the house before calling.</p>
+    <div class="contact-row">
+      <a class="cbtn" href="tel:13369062176">Call Jeremy</a>
+      <a class="cbtn alt" href="mailto:jls5797@gmail.com">Email Jeremy</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Your Documents</h2>
+    <div class="docs">
+      <a class="doc" href="#">
+        <strong>Lease Agreement</strong>
+        <span>Link coming soon</span>
+      </a>
+      <a class="doc" href="#">
+        <strong>Move-In Guide</strong>
+        <span>Link coming soon</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Maintenance Requests</h2>
+    <p>For anything that isn't urgent &mdash; a dripping faucet, an appliance acting up &mdash;
+       text or email Jeremy with a short description and a photo. Urgent issues
+       (no heat or AC, water leaks, no hot water): call right away.</p>
+  </div>
+
+  <div class="card">
+    <h2>Yard Care &mdash; Tenant Responsibility</h2>
+    <p>Per our agreement, yard upkeep is handled by you: <strong>mowing, weeding,
+       and blowing</strong> (grass clippings and leaves off the driveway, walks, and deck).
+       The photos below show the standard to maintain.</p>
+    <div class="yard-grid">
+      <img src="img/yard-front.jpg" alt="Front yard, freshly mowed with edged beds">
+      <img src="img/yard-side.jpg" alt="Side yard and sidewalk, trimmed and blown clean">
+      <img src="img/yard-back-deck.jpg" alt="Backyard by the deck, mowed">
+      <img src="img/yard-back-fence.jpg" alt="Backyard along the fence, mowed">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Moving-In Checklist</h2>
+    <ul>
+      <li><strong>Electricity:</strong> set up service with Duke Energy before move-in day.</li>
+      <li><strong>Water &amp; sewer:</strong> set up water service for the address (ask Jeremy if unsure of the provider).</li>
+      <li><strong>Internet:</strong> AT&amp;T and Spectrum both serve the neighborhood.</li>
+      <li><strong>Mail:</strong> file your change of address at usps.com.</li>
+      <li><strong>Renter's insurance:</strong> required &mdash; send Jeremy a copy of your policy.</li>
+      <li><strong>Trash &amp; recycling:</strong> roll the carts to the curb the evening before collection day.</li>
+      <li><strong>Know your home:</strong> locate the breaker panel and the main water shut-off on day one.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  4662 Crown Parkway &middot; Morrisville, NC 27560<br>
+  <a href="../">&larr; Back to the property page</a>
+</footer>
+
+</body>
+</html>
